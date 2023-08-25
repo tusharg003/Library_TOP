@@ -1,3 +1,7 @@
+const modal = document.querySelector(".modal");
+const modalForm = document.querySelector(".modal-content-form");
+const addBookBtn = document.querySelector(".addBook");
+const closeModalBtn = document.querySelector(".close");
 const nameOfBook = document.querySelector('#title');
 const pages = document.querySelector('#pages');
 const nameofAuthor = document.querySelector('#author');
@@ -5,6 +9,7 @@ const readCheckBox = document.querySelector('#readCheckBox');
 const submitBtn = document.querySelector('.submit');
 const myLibrary = [];
 
+//object constructor
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -15,14 +20,30 @@ function Book(title, author, pages, read) {
         return `The ${this.title} by ${this.author}, ${this.pages} pages, ${status}.`;
     }
 }
-// const bk1 = new Book("To kill the mocking bird", 'Tushar Gupta', '373', false);
-// console.log(bk1.info());
-
-function addBookToLibrary() {
-    
+//function to clear the form once an input has been recorded
+function clearForm() {
+    modalForm.reset();
 }
 
-function storeBook() {
+
+//modal opening and closing 
+function openModal() {
+    modal.style.display = "block";
+}
+function closeModal() {
+    modal.style.display = "none";
+}
+//open the modal
+addBookBtn.addEventListener('click', openModal);
+//close the modal
+closeModalBtn.addEventListener('click', closeModal);
+closeModalBtn.addEventListener('click', clearForm);
+
+
+
+//fun to store all the info from the form to array
+function storeBook(event) {
+    event.preventDefault();//prevents the default form submitting behavior causing the page to reload
     let bookName = nameOfBook.value;
     let authorName = nameofAuthor.value;
     let numberOfPages = pages.value;
@@ -36,4 +57,5 @@ function storeBook() {
 
 }
 submitBtn.addEventListener('click', storeBook);
+submitBtn.addEventListener('click', clearForm);
 
