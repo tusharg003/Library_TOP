@@ -1,0 +1,22 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: larger;
+}
+
+input {
+    margin: 5px;
+    width: 250px;
+    height: 20px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
