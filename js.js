@@ -38,7 +38,15 @@ addBookBtn.addEventListener('click', openModal);
 //close the modal
 closeModalBtn.addEventListener('click', closeModal);
 closeModalBtn.addEventListener('click', clearForm);
-
+// Adding a click event listener to the window object
+window.onclick = function (event) {
+    // Checking if the clicked element is the same as the modal element
+    if (event.target == modal) {
+        // If the condition is true, hide the modal by changing its display style
+        modal.style.display = "none";
+        clearForm();
+    }
+}
 
 
 //fun to store all the info from the form to array
