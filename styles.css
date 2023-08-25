@@ -1,3 +1,42 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: aliceblue;
+    height: 15vh;
+    align-items: center;
+    padding: 0px 50px
+}
+
+.banner {
+    flex: 2;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding: 3vh;
+}
+
+.nav-links {
+    width: fit-content;
+    border: none;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: rgb(219, 238, 255);
+    transition: transform 0.2s ease;
+    margin-left: 10px;
+}
+
+.nav-links:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    outline: none;
+}
+
 .main {
     display: flex;
     flex-direction: column;

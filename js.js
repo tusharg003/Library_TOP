@@ -1,7 +1,7 @@
 const nameOfBook = document.querySelector('#title');
 const pages = document.querySelector('#pages');
 const nameofAuthor = document.querySelector('#author');
-const readStatus = document.querySelector('#readCheckBox');
+const readCheckBox = document.querySelector('#readCheckBox');
 const submitBtn = document.querySelector('.submit');
 const myLibrary = [];
 
@@ -19,17 +19,21 @@ function Book(title, author, pages, read) {
 // console.log(bk1.info());
 
 function addBookToLibrary() {
-
+    
 }
 
-// function storeBook() {
-//     let bookName = nameOfBook.value;
-//     let authorName = nameofAuthor.value;
-//     let numberOfPages = pages.value;
-//     if (bookName != '' && authorName != '' && numberOfPages != ''){
-//         const bk=new Book(bookName,authorName,numberOfPages,)
-//     }
-// }
-console.log(readStatus.value);
+function storeBook() {
+    let bookName = nameOfBook.value;
+    let authorName = nameofAuthor.value;
+    let numberOfPages = pages.value;
+    let readStatus = readCheckBox.checked;
+    if (bookName != '' && authorName != '' && numberOfPages != '') {
+        const bk = new Book(bookName, authorName, numberOfPages, readStatus);
+        console.log(bk);
+        myLibrary.push(bk);
+    }
+    // console.log(readStatus.checked);
+
+}
 submitBtn.addEventListener('click', storeBook);
 
