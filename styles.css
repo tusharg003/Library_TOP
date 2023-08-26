@@ -1,6 +1,7 @@
 body {
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header {
@@ -16,7 +17,6 @@ body {
 .banner {
     flex: 2;
     font-size: 2rem;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     padding: 3vh;
 }
@@ -27,12 +27,12 @@ body {
     padding: 20px;
     border-radius: 50%;
     background-color: rgb(219, 238, 255);
-    transition: transform 0.2s ease;
+    transition: background-color 0.2s ease;
     margin-left: 10px;
 }
 
 .nav-links:hover {
-    transform: scale(1.1);
+    background-color: rgb(177, 218, 255);
     cursor: pointer;
     outline: none;
 }
@@ -58,6 +58,7 @@ body {
     /* Fallback color */
     background-color: rgba(0, 0, 0, .4);
     /* Black w/ opacity */
+
 }
 
 .modal-content-form {
@@ -72,47 +73,74 @@ body {
     height: fit-content;
     padding: 40px;
     padding-top: 20px;
-    background-color: rgb(235, 235, 235);
+    background-color: aliceblue;
     border-radius: 5px;
 }
 
 /* The Close Button */
-.close {
+.top {
     height: fit-content;
     margin-bottom: 20px;
-    color: #aaaaaa;
-    font-size: 25px;
-    
-}
-
-.close:hover {
-    color: black;
-    cursor: pointer;
-    outline: none;
-}
-
-label {
-    margin: 5px;
+    color: #464646;
+    font-size: 1.3em;
+    font-weight: 500;
+    padding-top: 10px;
 }
 
 input {
-    margin: 5px;
-    width: 250px;
-    height: 20px;
+    margin: 10px;
+    width: 90%;
+    height: 30px;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
     border: none;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    font-size: 1.1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
-#readCheckBox {
-    /*removing shadow form the check box*/
+input::placeholder {
+    color: #aaaaaa;
+}
+
+input:focus {
+    border: none;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
     box-shadow: none;
+}
+
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+.readStatusBar {
+    /* removing shadow form the check box */
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #272727;
 }
 
 button {
     margin-top: 10px;
-    padding: 5px 10px;
-    font-size: 1.1rem;
-    text-transform: uppercase;
+    padding: 15px;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    width: 95%;
+    background-color: rgb(219, 238, 255);
+    border: none;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #0d0c0c;
+    transition: background-color 0.2s ease;
+    font-weight: 700;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(177, 218, 255);
 }

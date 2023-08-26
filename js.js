@@ -1,7 +1,6 @@
 const modal = document.querySelector(".modal");
 const modalForm = document.querySelector(".modal-content-form");
 const addBookBtn = document.querySelector(".addBook");
-const closeModalBtn = document.querySelector(".close");
 const nameOfBook = document.querySelector('#title');
 const pages = document.querySelector('#pages');
 const nameofAuthor = document.querySelector('#author');
@@ -35,9 +34,7 @@ function closeModal() {
 }
 //open the modal
 addBookBtn.addEventListener('click', openModal);
-//close the modal
-closeModalBtn.addEventListener('click', closeModal);
-closeModalBtn.addEventListener('click', clearForm);
+
 // Adding a click event listener to the window object
 window.onclick = function (event) {
     // Checking if the clicked element is the same as the modal element
