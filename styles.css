@@ -159,10 +159,8 @@ button:hover {
     /* margin-top: 5vh; */
     flex-wrap: wrap;
 }
-.library-container{
-    
-}
 .bookDisplay {
+    /* display: none; */
     display: flex;
     flex-direction: column;
     min-width: 21vw;
