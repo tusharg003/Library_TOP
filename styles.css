@@ -2,6 +2,8 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+
+    background-color: rgb(237, 237, 237)
 }
 
 .header {
@@ -11,7 +13,9 @@ body {
     background-color: aliceblue;
     height: 15vh;
     align-items: center;
-    padding: 0px 50px
+    padding: 0px 50px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .banner {
@@ -19,6 +23,7 @@ body {
     font-size: 2rem;
     font-weight: 500;
     padding: 3vh;
+
 }
 
 .nav-links {
@@ -143,4 +148,64 @@ button {
 button:hover {
     cursor: pointer;
     background-color: rgb(177, 218, 255);
+}
+
+.library-container {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin: auto;
+    /* margin-top: 5vh; */
+    flex-wrap: wrap;
+}
+.library-container{
+    
+}
+.bookDisplay {
+    display: flex;
+    flex-direction: column;
+    min-width: 21vw;
+    width: 21vw;
+    /* height: fit-content; */
+    height: 45vh;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 5vh;
+    padding: 20px 30px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white
+}
+
+.info {
+    width: 90%;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    word-wrap: break-word;
+
+}
+
+.bk-name {
+    flex: 3;
+}
+
+.author-name {
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.utility-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-top: 30px;
+}
+
+.utility-btns>button {
+    width: 100%;
 }
