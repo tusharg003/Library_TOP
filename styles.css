@@ -2,7 +2,6 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-
     background-color: rgb(237, 237, 237)
 }
 
@@ -206,4 +205,8 @@ button:hover {
 
 .utility-btns>button {
     width: 100%;
+}
+
+.on{
+    background-color: greenyellow;
 }

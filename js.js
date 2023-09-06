@@ -9,20 +9,15 @@ const submitBtn = document.querySelector('.submit');
 
 const myLibrary = [];
 
-//object constructor
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
-Book.prototype.toggleRead = function () {
-    this.read = !this.read;
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 }
 
-function toggleRead(index) {
- 
-}
 
 //function to clear the form once an input has been recorded
 function clearForm() {
@@ -59,6 +54,10 @@ function render() {
         `;
     }
 
+}
+
+function toggleRead(index){
+    
 }
 function removeBook(index) {
     myLibrary.splice(index, 1);
